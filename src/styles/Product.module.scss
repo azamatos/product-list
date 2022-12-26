@@ -1,0 +1,54 @@
+@mixin flexStyle($direction, $justify, $align) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+.product {
+  width: 330px;
+  height: 460px;
+  @include flexStyle(column, flex-start, center);
+  padding: 30px;
+  gap: 15px;
+  border: 1px solid #f5f5f7;
+
+  .titleBlock {
+    width: 100%;
+    @include flexStyle(column, flex-start, flex-start);
+    gap: 10px;
+    color: #000;
+
+    .categoryBlock {
+      width: 100%;
+      @include flexStyle(row, space-between, flex-start);
+
+      .categoryTitle {
+        font-size: 12px;
+        font-weight: 400;
+        color: #999999;
+      }
+
+      .rateBlock {
+        @include flexStyle(row, flex-start, flex-start);
+        gap: 5px;
+        .starsBlock {
+          @include flexStyle(row, flex-start, flex-start);
+          gap: 2px;
+        }
+      }
+    }
+
+    .mainTitle {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 22px;
+    }
+
+    .priceTitle {
+      font-weight: 600;
+      font-size: 22px;
+      line-height: 20px;
+    }
+  }
+}
