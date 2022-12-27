@@ -1,0 +1,88 @@
+@import "mixins";
+
+.mainBlock {
+  width: 330px;
+  height: 460px;
+  padding-top: 20px;
+  @include flexStyle(column, center, flex-start);
+  background-color: #fff;
+  gap: 30px;
+
+  .mainTitle {
+    font-size: 28px;
+    font-weight: bold;
+    line-height: 33px;
+    color: #2e2e33;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 150px);
+    row-gap: 15px;
+    width: 100%;
+
+    .blockText {
+      font-size: 15px;
+      line-height: 24px;
+    }
+
+    .selectText {
+      font-size: 11px;
+      opacity: 0.8;
+    }
+
+    .secondBlock {
+      position: relative;
+      width: 150px;
+      height: 140px;
+      padding-left: 20px;
+      margin-left: 30px;
+      @include flexStyle(column, center, flex-start);
+      gap: 10px;
+      background-color: #636b7f;
+      color: #fff;
+
+      .firstdiscountBlock {
+        position: absolute;
+        top: 12px;
+        left: 10px;
+
+        .firstDiscount {
+          position: absolute;
+          top: 5px;
+          left: 12px;
+          color: #000;
+          font-size: 14px;
+          font-weight: bold;
+        }
+      }
+    }
+
+    .thirdBlock {
+      position: relative;
+      width: 150px;
+      height: 140px;
+      padding-left: 15px;
+      @include flexStyle(column, center, flex-start);
+      gap: 10px;
+      background-color: #e7e9ec;
+      color: #2e2e33;
+
+      .seconddiscountBlock {
+        position: absolute;
+        top: 20px;
+        right: 10px;
+
+        .secondDiscount {
+          position: absolute;
+          top: 5px;
+          left: 18px;
+          color: #000;
+          font-size: 14px;
+          font-weight: bold;
+        }
+      }
+    }
+    
+  }
+}

@@ -13,3 +13,8 @@ type Product = {
   rating: Rating;
 };
 
+interface ProductSlice {
+  products: Product[];
+  bucketProducts: number[];
+  favouriteProducts: boolean[];
+}
